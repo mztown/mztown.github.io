@@ -25,10 +25,18 @@
 
       // ===== 在此编写 mermaid 文本（写死于本页，手动编辑） =====
       var MERMAID_TEXT = [
-        'graph TD',
-        '  A[开始] --> B{是否完成?}',
-        '  B -->|是| C[结束]',
-        '  A --> E --> C',
+       'flowchart TD',
+  'A[Start] --hyper--> B{Path}',
+  'B -->|是| C[Finish]',
+  'A -- zealot --> D>Alternate] -- grand--> C',
+  'E(AnotherStart) -- GoesTo --> C',
+  'E --Marv--> F((SplitEnd))',
+  'E--Checker--> G([DifferentEnd])',
+  'D --Mimo--> G',
+  'subgraph sub',
+  '  D',
+  '  E',
+  'end',
       ].join('\n');
       // ========================================================
 
